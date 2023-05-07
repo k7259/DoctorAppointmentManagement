@@ -1,0 +1,36 @@
+﻿@model List<Speciality>
+<div class="container p-3">
+    <div class="row p-2">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Specialities
+            </h2>
+        </div>
+        <div class="col-6">
+            <a asp-controller="Spaciality" asp-action="Create" class="btn btn-primary">Add New Speciality</a>
+        </div>
+    </div>
+</div>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Speciality Name </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+            </tr>
+            
+        }
+    </tbody>
+
